@@ -1,0 +1,19 @@
+appId: evermos.evermos.com.evermos.stag
+---
+- runFlow: Quiz_18_Login.yaml
+- scroll
+- tapOn: "Daftar Produk"
+- extendedWaitUntil:
+    visible: "Daftar Produk"  
+    timeout: 5000 
+- tapOn:
+    point: 100,600
+- tapOn: "Pesan Sekarang"
+- tapOn: "Putih"
+- tapOn: "Masukkan ke Keranjang"
+- extendedWaitUntil:
+    visible: "Detail Pengiriman"  
+    timeout: 100000 
+- tapOn: "Lanjutkan"
+- assertVisible:
+    text: "Keranjang"

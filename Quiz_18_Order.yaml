@@ -1,0 +1,16 @@
+appId: evermos.evermos.com.evermos.stag
+---
+- runFlow: Quiz_18_Cart.yaml
+- tapOn: "Lanjut ke Checkout"
+- extendedWaitUntil:
+    visible: "Checkout"  
+    timeout: 100000
+- tapOn: "Lanjutkan ke Pembayaran"
+- tapOn: "Bayar"
+- tapOn: "Danamon Online"
+# - tapOn: "Tekan disini untuk mensimulasikan pembayaran"
+- tapOn: "Pay now"
+- tapOn: "Pay"
+- tapOn: "Back to merchant website"
+- assertVisible:
+    text: "Alhamdulillah, Pembayaran Berhasil!"

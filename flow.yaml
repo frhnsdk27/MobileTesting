@@ -1,0 +1,19 @@
+# appId: evermos.evermos.com.stag
+# ---
+# - launchApp
+# # appId: org.wikipedia
+# # ---
+# # - launchApp:
+# #     clearState: true
+# # - tapOn: "SKIP"
+appId: org.wikipedia
+---
+- launchApp:
+    clearState: true
+- tapOn: "SKIP"
+- tapOn: "Search Wikipedia"
+- inputText: "evermos"
+- tapOn: "Evermore (Taylor Swift album)"
+- assertVisible:
+    text: "2020 studio album by Taylor Swift"
+
